@@ -1,0 +1,37 @@
+<head>
+<script>
+	function create(){
+	 var table = document.getElementById("row");
+	 var th = document.createElement('th');
+    var fName = document.getElementById('fName').value;
+    var lName = document.getElementById('lName').value;
+    var tr = document.createElement('tr');
+    var td = tr.appendChild(document.createElement('td'));
+    var td1 = tr.appendChild(document.createElement('td'));
+    td.innerHTML = fName;
+    td1.innerHTML = lName;
+    
+    table.appendChild(tr);
+    if (fName === "Rahul") {
+    	table.removeChild(tr) ;
+    }
+	}
+   
+</script>
+</head>
+<body>
+
+<Label><B>First Name </B></Label> <input id ="fName"  /> 
+<br>
+<Label><B>Last Name </B></Label> <input id ="lName"  /> 
+<br>
+<button onclick="create()">Submit</button> 
+<br>
+
+<form >
+<table border = "1" id="row">
+
+
+</table>
+</form>
+</body>
